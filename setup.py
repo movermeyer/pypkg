@@ -1,6 +1,30 @@
 from setuptools import setup, find_packages  # Always prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
 from os import path
+=======
+from setuptools import setup, find_packages
+import codecs
+import os
+import re
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+# Read the version number from a source file. Rationale:
+# https://groups.google.com/d/topic/pypa-dev/0PkjVpcxTzQ/discussion
+def find_version(*file_paths):
+    # Use codecs.open for Python 2 compatibility
+    filepath = os.path.join(here, *file_paths)
+    with codecs.open(filepath, 'r', encoding='utf-8') as f:
+        version_file = f.read()
+
+    # The version line must have the form
+    # __version__ = 'ver'
+    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", 
+                              version_file, re.MULTILINE)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
+>>>>>>> bb2bbe0... Customize to personal tastes.
 
 here = path.abspath(path.dirname(__file__))
 
@@ -19,33 +43,32 @@ setup(
     description='A sample Python project',
     long_description=long_description,
 
-    # The project's main homepage.
-    url='https://github.com/pypa/sampleproject',
+    # The project URL.
+    url='https://github.com/dghubble/sampleproject',
 
     # Author details
-    author='The Python Packaging Authority',
-    author_email='pypa-dev@googlegroups.com',
+    author='Dalton Hubble',
+    author_email='dghubble@gmail.com',
 
     # Choose your license
     license='MIT',
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        # How mature is this project? Common values are
-        #   3 - Alpha
-        #   4 - Beta
-        #   5 - Production/Stable
+        # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+        # Project maturity. 
         'Development Status :: 3 - Alpha',
 
-        # Indicate who your project is intended for
+        # Intended audience
         'Intended Audience :: Developers',
+
+        # Topic
         'Topic :: Software Development :: Build Tools',
 
-        # Pick your license as you wish (should match "license" above)
+        # License should match "license" above
         'License :: OSI Approved :: MIT License',
 
-        # Specify the Python versions you support here. In particular, ensure
-        # that you indicate whether you support Python 2, Python 3 or both.
+        # Python versions supported
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
@@ -62,31 +85,22 @@ setup(
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
 
-    # List run-time dependencies here.  These will be installed by pip when your
-    # project is installed. For an analysis of "install_requires" vs pip's
-    # requirements files see:
-    # https://packaging.python.org/en/latest/technical.html#install-requires-vs-requirements-files
-    install_requires=['peppercorn'],
+    # Run-time package dependencies. These will be installed by pip when your
+    # project is installed.
+    install_requires=['requests'],
 
-    # If there are data files included in your packages that need to be
-    # installed, specify them here.  If using Python 2.6 or less, then these
-    # have to be included in MANIFEST.in as well.
+    # Data files included in your packages. If using Python 2.6 or less, 
+    # then these have to be included in MANIFEST.in as well.
     package_data={
         'sample': ['package_data.dat'],
     },
-
-    # Although 'package_data' is the preferred approach, in some case you may
-    # need to place data files outside of your packages.
-    # see http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
-    # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    data_files=[('my_data', ['data/data_file'])],
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
         'console_scripts': [
-            'sample=sample:main',
+            'sample=sample.main:main',
         ],
     },
 )

@@ -7,4 +7,4 @@
 
 def fancy(message):
 	"""Print message with surrounding ~'s"""
-	return "~{}~".format(message)
+	return "~{0}~".format(message)

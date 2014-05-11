@@ -1,44 +1,22 @@
-from setuptools import setup, find_packages  # Always prefer setuptools over distutils
+from setuptools import setup, find_packages  # Prefer setuptools over distutils
 from codecs import open  # To use a consistent encoding
-from os import path
-=======
-from setuptools import setup, find_packages
-import codecs
 import os
-import re
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-# Read the version number from a source file. Rationale:
-# https://groups.google.com/d/topic/pypa-dev/0PkjVpcxTzQ/discussion
-def find_version(*file_paths):
-    # Use codecs.open for Python 2 compatibility
-    filepath = os.path.join(here, *file_paths)
-    with codecs.open(filepath, 'r', encoding='utf-8') as f:
-        version_file = f.read()
-
-    # The version line must have the form
-    # __version__ = 'ver'
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", 
-                              version_file, re.MULTILINE)
-    if version_match:
-        return version_match.group(1)
-    raise RuntimeError("Unable to find version string.")
->>>>>>> bb2bbe0... Customize to personal tastes.
-
-here = path.abspath(path.dirname(__file__))
+version_file = open(os.path.join(here, 'sample', 'VERSION'))
+version = version_file.read().strip()
 
 # Get the long description from the relevant file
-with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
+with open(os.path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
     name='sample',
-
-    # Versions should comply with PEP440.  For a discussion on single-sourcing
-    # the version across setup.py and the project code, see
+    
+    # Versions should comply with PEP440. For single-sourced versioning, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='1.2.0',
+    version=version,
 
     description='A sample Python project',
     long_description=long_description,

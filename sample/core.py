@@ -5,7 +5,7 @@
     :copyright: (c) 2014 by Dalton Hubble
 """
 
-from utils import fancy
+from .utils import fancy
 
 def echo(message):
     """

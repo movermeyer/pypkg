@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    Core functionality of the sample package.
-
-    :copyright: (c) 2014 by Dalton Hubble
+    Core functionality of the package.
 """
 
 from .utils import fancy

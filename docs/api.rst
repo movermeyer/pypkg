@@ -1,10 +1,10 @@
 API
 ===
 
-.. module:: sample
+.. module:: pypkg
 
 Functions
 ---------
 
-.. autofunction:: sample.core.echo
-.. autofunction:: sample.core.fancy
+.. autofunction:: pypkg.core.echo
+.. autofunction:: pypkg.core.fancy

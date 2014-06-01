@@ -1,7 +1,8 @@
 import unittest
-from sample import core, utils
 
-class SimpleTest(unittest.TestCase):
+from pypkg import core, utils
+
+class PypkgTest(unittest.TestCase):
     
     def test_true(self):
         self.assertTrue(True)

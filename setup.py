@@ -1,19 +1,19 @@
 from setuptools import setup, find_packages  # Prefer setuptools over distutils
-from codecs import open  # To use a consistent encoding
+import codecs
 import os
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-version_file = open(os.path.join(here, 'sample', 'VERSION'))
+version_file = open(os.path.join(here, 'pypkg', 'VERSION'))
 version = version_file.read().strip()
 
 # Get the long description from the relevant file
-with open(os.path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
+with codecs.open(os.path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='sample',
-    
+    name='pypkg',
+
     # Versions should comply with PEP440. For single-sourced versioning, see
     # http://packaging.python.org/en/latest/tutorial.html#version
     version=version,
@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
 
     # The project URL.
-    url='https://github.com/dghubble/sampleproject',
+    url='https://github.com/dghubble/pypkg',
 
     # Author details
     author='Dalton Hubble',
@@ -57,7 +57,7 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='sample setuptools development',
+    keywords='pypkg setuptools development',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
@@ -70,7 +70,7 @@ setup(
     # Data files included in your packages. If using Python 2.6 or less, 
     # then these have to be included in MANIFEST.in as well.
     package_data={
-        'sample': ['package_data.dat'],
+        'pypkg': ['package_data.dat'],
     },
 
     # To provide executable scripts, use entry points in preference to the
@@ -78,7 +78,7 @@ setup(
     # pip to create the appropriate form of executable for the target platform.
     entry_points={
         'console_scripts': [
-            'sample=sample.main:main',
+            'pypkg=pypkg.main:main',
         ],
     },
 )

@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
     Common utilities.
-
-    :copyright: (c) 2014 by Dalton Hubble
 """
 
 def fancy(message):

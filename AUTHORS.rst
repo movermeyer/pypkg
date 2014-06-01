@@ -1,4 +1,4 @@
-Sample is written and maintained by Dalton Hubble and other contributors:
+Written and maintained by Dalton Hubble and other contributors:
 
 Development Lead
 ================

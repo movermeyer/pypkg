@@ -31,20 +31,20 @@ Getting Started
 4. Install development dependencies into a virtual environment and list them in `requirements.txt`.
 5. Develop the package locally.
 
-::
+.. code-block:: bash
     
     python setup.py develop      # setuptools way
     pip install -e .             # pip way
 
 6. Write tests for the package and ensure the .travis.yml config will run them.
 
-::
+.. code-block:: bash
 
     nosetests  # autodiscover and run tests (run from project root)
 
 7. Write Sphinx documentation for the package.
 
-::
+.. code-block:: bash
 
     cd docs
     make html
@@ -71,16 +71,20 @@ Publishing
 5. Go to `ReadTheDocs <https://readthedocs.org/>`_ and build your docs from the hosted source.
 6. Build and pack the package.
 
-::
+.. code-block:: bash
 
-    python setup.py sdist        # source distribution
-    python setup.py bdist        # binary distribution
+    python setup.py sdist          # source distribution
+    python setup.py bdist_wheel    # binary wheel distribution
 
-7. Register the package name with `PyPI <https://pypi.python.org/pypi>`_.::
+7. Register the package name with `PyPI <https://pypi.python.org/pypi>`_.
+
+.. code-block:: bash
 
     python setup.py register
 
-Note that registration still currently occurs over insecure http rather than https. The first attempt to connect to PyPI prompts for a username and password and generates a `.pypirc` file like the following::
+Note that registration still currently occurs over insecure http rather than https. The first attempt to connect to PyPI prompts for a username and password and generates a `.pypirc` file like the following:
+
+.. code-block:: ini
 
     [distutils]
     index-servers =
@@ -90,13 +94,14 @@ Note that registration still currently occurs over insecure http rather than htt
     username:dghubble
     password:mypass
 
-to simplify future registrations/uploads.
+to simplify future registrations/uploads. Registration also updates the 
 
 8. Upload the package distributions to PyPI.
 
-::
+.. code-block:: bash
 
-    twine upload dist/*
+    twine upload dist/*       # using twine
+
 
 9. Check all README.rst links, documentation links, and PyPI links for correctness.
 10. Improve and maintain the project, docs, and tests. There is no last step. You are never done.

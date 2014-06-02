@@ -3,8 +3,8 @@ API
 
 .. module:: pypkg
 
-Functions
----------
+Core
+----
 
 .. autofunction:: pypkg.core.echo
 .. autofunction:: pypkg.core.fancy

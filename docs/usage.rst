@@ -1,25 +1,5 @@
-Pypkg
+Usage
 =====
-
-.. image:: https://pypip.in/version/pypkg/badge.png
-    :target: https://pypi.python.org/pypi/pypkg/
-    :alt: Latest Version
-
-.. image:: https://travis-ci.org/dghubble/pypkg.png
-    :target: https://travis-ci.org/dghubble/pypkg
-    :alt: Continuous Integration Testing
-
-.. image:: https://pypip.in/download/pypkg/badge.png
-    :target: https://pypi.python.org/pypi/pypkg/
-    :alt: Downloads
-
-.. image:: https://pypip.in/license/pypkg/badge.png
-    :target: https://pypi.python.org/pypi/pypkg/
-    :alt: License
-
-Pypkg is an example package that exists as an aid to the `Python Packaging User Guide
-Tutorial <https://python-packaging-user-guide.readthedocs.org/en/latest/tutorial.html>`_ and demonstrates best practices for Python packages. This fork has been customized to suit my own preferences.
-
 
 Getting Started
 ---------------
@@ -50,6 +30,17 @@ Getting Started
     make html
 
 8. Change the `LICENSE` file to a license you like. Update the license link in `README.rst`.
+
+
+Checklist
+---------
+
+After making development changes, use this checklist:
+
+- Local nosetests pass
+- Continuous Integration tests pass (sandbox)
+- Changes are summarized in `CHANGES.rst`
+- Increment the version in `pypkg/VERSION`
 
 
 Publishing
@@ -96,90 +87,3 @@ to simplify future registrations/uploads. Registration also updates the
 
 9. Check all README.rst links, documentation links, and PyPI links for correctness.
 10. Improve and maintain the project, docs, and tests. There is no last step. You are never done.
-
-Modifications: Checklist
-------------------------
-
-After making changes, complete the following tasks:
-
-* Local nosetests pass
-* Changes are summarized in `CHANGES.rst`
-* Increment the version in `pypkg/VERSION` and the documentation
-* Continuous Integration tests pass (sandbox)
-* Code pushed to source host
-* Rebuild the `ReadTheDocs <https://readthedocs.org/>`_ docs from the project overview
-* Upload releases to `PyPI <https://pypi.python.org/pypi>`_
-
-
-Example
-=======
-
-Install
--------
-
-Install pypkg via `pip <https://pip.pypa.io/en/latest/>`_
-
-.. code-block:: bash
-
-    $ pip install pypkg
-
-Usage
------
-
-.. code-block:: bash
-
-    $ pypkg
-    ~Call your main application code here~
-
-.. code-block:: pycon
-
-    >>> from pypkg.core import fancy_print
-    >>> fancy_print("hello world")
-    ~hello world~
-
-Documentation
--------------
-
-Documentation is available `here <http://pypkg.readthedocs.org/en/latest/>`_.
-
-
-Contributing
-------------
-
-To get the source from Github
-
-.. code-block:: bash
-
-    $ git clone git@github.com:dghubble/pypkg.git
-    $ cd pypkg
-    $ python setup.py develop
-
-
-Testing
--------
-
-.. code-block:: bash
-
-    $ pip install nose
-    $ cd pypkg
-    $ nosetests
-    ....
-    ----------------------------------------------------------------------
-    Ran 4 tests in 0.147s
-
-    OK
-
-
-Questions, Comments, Contact
-----------------------------
-
-If you'd like to contact me, you can Tweet to `@dghubble <https://twitter.com/dghubble>`_ or email dghubble@gmail.com.
-
-
-License
--------
-
-`MIT License <LICENSE>`_ 
-
-
-

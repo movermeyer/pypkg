@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages  # Prefer setuptools over distutils
+from setuptools import setup, find_packages
 import codecs
 import os
 
@@ -35,7 +35,7 @@ setup(
     classifiers=[
         # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         # Project maturity. 
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
 
         # Intended audience
         'Intended Audience :: Developers',

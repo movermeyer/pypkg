@@ -332,6 +332,14 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #epub_use_index = True
 
+# for autoclass, the class docstring and the __init__ method docstring
+# are combined and used
+autoclass_content = 'both'
+# ordering of members in documentation should correspond to the order in
+# source
+autodoc_member_order = 'bysource'
+
+# apply the vendored kr-sphinx-theme
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
 html_theme = 'kr'

@@ -65,7 +65,9 @@ setup(
 
     # Run-time package dependencies. These will be installed by pip when your
     # project is installed.
-    install_requires=['requests'],
+    install_requires=[
+        'requests',
+    ],
 
     # Data files included in your packages. If using Python 2.6 or less, 
     # then these have to be included in MANIFEST.in as well.

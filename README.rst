@@ -51,6 +51,20 @@ Getting Started
 
 8. Change the `LICENSE` file to a license you like. Update the license link in `README.rst`.
 
+Modifications: Checklist
+------------------------
+
+After making changes, complete the following tasks:
+
+* Local nosetests pass
+* Changes are summarized in `CHANGES.rst`
+* Increment the version in `pypkg/VERSION` and the documentation
+* README summary matches `DESCRIPTION.rst`
+* Continuous Integration tests pass (sandbox)
+* Code pushed to source host
+* Rebuild the `ReadTheDocs <https://readthedocs.org/>`_ docs from the project overview
+* Upload releases to `PyPI <https://pypi.python.org/pypi>`_. If metadata has changed, re-register the package to upload the new metadata.
+
 
 Publishing
 ----------
@@ -71,7 +85,7 @@ Publishing
 
 .. code-block:: bash
 
-    python setup.py register
+    python setup.py register       # uploads all metadata to PyPI     
 
 Note that registration still currently occurs over insecure http rather than https. The first attempt to connect to PyPI prompts for a username and password and generates a `.pypirc` file like the following:
 
@@ -97,22 +111,27 @@ to simplify future registrations/uploads. Registration also updates the
 9. Check all README.rst links, documentation links, and PyPI links for correctness.
 10. Improve and maintain the project, docs, and tests. There is no last step. You are never done.
 
-Modifications: Checklist
-------------------------
-
-After making changes, complete the following tasks:
-
-* Local nosetests pass
-* Changes are summarized in `CHANGES.rst`
-* Increment the version in `pypkg/VERSION` and the documentation
-* Continuous Integration tests pass (sandbox)
-* Code pushed to source host
-* Rebuild the `ReadTheDocs <https://readthedocs.org/>`_ docs from the project overview
-* Upload releases to `PyPI <https://pypi.python.org/pypi>`_
-
 
 Example
 =======
+
+.. image:: https://pypip.in/version/pypkg/badge.png
+    :target: https://pypi.python.org/pypi/pypkg/
+    :alt: Latest Version
+
+.. image:: https://travis-ci.org/dghubble/pypkg.png
+    :target: https://travis-ci.org/dghubble/pypkg
+    :alt: Continuous Integration Testing
+
+.. image:: https://pypip.in/download/pypkg/badge.png
+    :target: https://pypi.python.org/pypi/pypkg/
+    :alt: Downloads
+
+.. image:: https://pypip.in/license/pypkg/badge.png
+    :target: https://pypi.python.org/pypi/pypkg/
+    :alt: License
+
+Summary...
 
 Install
 -------
@@ -122,6 +141,12 @@ Install pypkg via `pip <https://pip.pypa.io/en/latest/>`_
 .. code-block:: bash
 
     $ pip install pypkg
+
+If you want to remove the package later
+
+.. code-block:: bash
+
+    $ pip uninstall pypkg
 
 Usage
 -----
@@ -152,7 +177,15 @@ To get the source from Github
 
     $ git clone git@github.com:dghubble/pypkg.git
     $ cd pypkg
+    $ pip install -r requirements.txt
     $ python setup.py develop
+
+If you want to remove the development install
+
+.. code-block:: bash
+
+    $ cd pypkg
+    $ python setup.py develop --uninstall
 
 
 Testing
@@ -161,7 +194,6 @@ Testing
 .. code-block:: bash
 
     $ pip install nose
-    $ cd pypkg
     $ nosetests
     ....
     ----------------------------------------------------------------------
@@ -173,13 +205,10 @@ Testing
 Questions, Comments, Contact
 ----------------------------
 
-If you'd like to contact me, you can Tweet to `@dghubble <https://twitter.com/dghubble>`_ or email dghubble@gmail.com.
+If you'd like to contact me, feel free to Tweet to `@dghubble <https://twitter.com/dghubble>`_ or email dghubble@gmail.com.
 
 
 License
 -------
 
 `MIT License <LICENSE>`_ 
-
-
-

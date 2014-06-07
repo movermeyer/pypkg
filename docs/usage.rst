@@ -31,16 +31,19 @@ Getting Started
 
 8. Change the `LICENSE` file to a license you like. Update the license link in `README.rst`.
 
+Modifications: Checklist
+------------------------
 
-Checklist
----------
+After making changes, complete the following tasks:
 
-After making development changes, use this checklist:
-
-- Local nosetests pass
-- Continuous Integration tests pass (sandbox)
-- Changes are summarized in `CHANGES.rst`
-- Increment the version in `pypkg/VERSION`
+* Local nosetests pass
+* Changes are summarized in `CHANGES.rst`
+* Increment the version in `pypkg/VERSION` and the documentation
+* README summary matches `DESCRIPTION.rst`
+* Continuous Integration tests pass (sandbox)
+* Code pushed to source host
+* Rebuild the `ReadTheDocs <https://readthedocs.org/>`_ docs from the project overview
+* Upload releases to `PyPI <https://pypi.python.org/pypi>`_. If metadata has changed, re-register the package to upload the new metadata.
 
 
 Publishing
@@ -62,7 +65,7 @@ Publishing
 
 .. code-block:: bash
 
-    python setup.py register
+    python setup.py register       # uploads all metadata to PyPI     
 
 Note that registration still currently occurs over insecure http rather than https. The first attempt to connect to PyPI prompts for a username and password and generates a `.pypirc` file like the following:
 

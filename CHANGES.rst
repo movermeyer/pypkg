@@ -3,16 +3,22 @@ Changelog
 
 Notable changes between releases.
 
-1.2.3 (2014-5-31)
------------------
+1.2.4 (2014-05-07)
+-------------------
+
+* Include VERSION file in binary wheel distribution
+* Add uninstall notes to README
+
+1.2.3 (2014-05-31)
+-------------------
 
 * Rename package as pypkg instead of sample
 * update source, docs, tests to use pypkg
 * Update README with modification checklist
 * Add Getting Started, Publishing sections
 
-1.2.2 (2014-5-11)
------------------
+1.2.2 (2014-05-11)
+-------------------
 
 * Update README.rst
 * Track runtime dependencies in requirements.txt
@@ -22,6 +28,6 @@ Notable changes between releases.
 * Cleanup existing comments
 
 1.2 (2014-5-30)
----------------
+----------------
 
 * Fork from https://github.com/pypa/sampleproject

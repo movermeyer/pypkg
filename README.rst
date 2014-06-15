@@ -18,7 +18,7 @@ Pypkg
     :alt: License
 
 Pypkg is an example package that exists as an aid to the `Python Packaging User Guide
-Tutorial <https://python-packaging-user-guide.readthedocs.org/en/latest/tutorial.html>`_ and demonstrates best practices for Python packages. This fork has been customized to suit my own preferences.
+Tutorial <https://python-packaging-user-guide.readthedocs.org/en/latest/tutorial.html>`_ and demonstrates best practices for Python packages. This project was forked from `github.com/pypa/sampleproject <https://github.com/pypa/sampleproject>`_.
 
 
 Getting Started

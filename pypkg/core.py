@@ -3,6 +3,7 @@
     Core functionality of the package.
 """
 
+from __future__ import print_function
 from .utils import fancy
 
 def echo(message):
@@ -21,7 +22,7 @@ def fancy_print(message):
         message (obj): the message object to echo
 
     Returns:
-        None 
+        None
 
     Raises:
     """

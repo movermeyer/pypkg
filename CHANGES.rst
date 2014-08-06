@@ -3,10 +3,16 @@ Changelog
 
 Notable changes between releases.
 
+1.2.5 (2014-08-06)
+------------------
+
+* Include package data in distribution
+* Includes VERSION file, docs, tests
+* Set zip_safe to False
+
 1.2.4 (2014-06-07)
 -------------------
 
-* Include VERSION file in distributions
 * Add uninstall notes to README
 
 1.2.3 (2014-05-31)

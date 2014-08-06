@@ -83,4 +83,12 @@ setup(
             'pypkg=pypkg.main:main',
         ],
     },
+
+    # MANIFEST.in included entries should be included as package data and
+    # installed into site-packages 
+    include_package_data=True,
+
+    # Default to False unless you specifically intend the package to be
+    # installed as an .egg
+    zip_safe=False,
 )

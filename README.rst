@@ -1,7 +1,7 @@
 Pypkg
 =====
 
-.. image:: https://pypip.in/version/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/v/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: Latest Version
 
@@ -9,11 +9,11 @@ Pypkg
     :target: https://travis-ci.org/dghubble/pypkg
     :alt: Continuous Integration Testing
 
-.. image:: https://pypip.in/download/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/dm/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: Downloads
 
-.. image:: https://pypip.in/license/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/l/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: License
 
@@ -115,7 +115,7 @@ to simplify future registrations/uploads. Registration also updates the
 Example
 =======
 
-.. image:: https://pypip.in/version/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/v/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: Latest Version
 
@@ -123,11 +123,11 @@ Example
     :target: https://travis-ci.org/dghubble/pypkg
     :alt: Continuous Integration Testing
 
-.. image:: https://pypip.in/download/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/dm/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: Downloads
 
-.. image:: https://pypip.in/license/pypkg/badge.png
+.. image:: https://img.shields.io/pypi/l/pypkg.svg
     :target: https://pypi.python.org/pypi/pypkg/
     :alt: License
 
